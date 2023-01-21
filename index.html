@@ -25,8 +25,8 @@
     /* The actual popup */
     .popup .popuptext {
       visibility: hidden;
-      width: 160px;
-      background-color: #555;
+      width: 360px;
+      background-color: #c65151;
       color: #fff;
       text-align: center;
       border-radius: 6px;
@@ -35,7 +35,7 @@
       z-index: 1;
       bottom: 125%;
       left: 50%;
-      margin-left: -80px;
+      margin-left: -180px;
     }
     
     /* Popup arrow */
@@ -198,18 +198,22 @@
                     <h2 class="content-title purple no-margin-bottom ">Sign In</h2>
                     <hr />
                     <div class="row">
-                        <div class="col-md-12 text-align-center popup" onclick="myFunction()">
-                                <span class="popuptext" id="myPopup">A Simple Popup!</span>
-                              
-                              <script>
-                              // When the user clicks on div, open the popup
-                              function myFunction() {
-                                var popup = document.getElementById("myPopup");
-                                popup.classList.toggle("show");
-                              }
-                              </script>
-                            <a href="Authentication?selectionType=PIV" class="btn btn-default piv-login piv-button" style="margin: 10px 20px 10px 20px; max-width: 80%; min-width: 300px;"
-                                title="Sign in with your PIV (Insert Card First)" role="button" tabindex="0">
+                        <div class="col-md-12 text-align-center">
+                            <div class="btn btn-default piv-login piv-button popup" onclick="myFunction()" style="margin: 10px 20px 10px 20px; max-width: 80%; min-width: 300px;"
+                                title="Sign in with your PIV (Insert Card First)" role="button" tabindex="0"> 
+                                <span class="popuptext" id="myPopup">
+                                    Thank you for visiting this fake EmployeeExpress <br>
+                                    site. For more information, please visit a <br>
+                                    <a href="https://example.com">yet to be developed website</a>
+                                </span>
+                                
+                                <script>
+                                // When the user clicks on div, open the popup
+                                function myFunction() {
+                                    var popup = document.getElementById("myPopup");
+                                    popup.classList.toggle("show");
+                                }
+                                </script>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class=" piv-icon pull-left"></div>
@@ -225,7 +229,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                         <div class="col-md-12">
                             <div class="text-align-center" style="padding-top: 20px;white-space: normal;" >
