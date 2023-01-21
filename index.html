@@ -7,7 +7,67 @@
 	Welcome to Employee Express - Employee Express
 </title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="/Content/c.css" rel="stylesheet"/>
-<link  href="/Content/print.css" rel="stylesheet" media="print" >
+
+<script src= "/jquery.min.js"></script>
+<style>
+    /* code ripped from https://w3schools.com */
+    /* Popup container - can be anything you want */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* The actual popup */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+    
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+    
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;} 
+      to {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    </style>
 <link href="favicon.ico" rel="icon" type="image/x-icon" title="Opened Files image" /></head>
 
 <body id="MasterBody" data-istransactionpage="False">
@@ -138,7 +198,16 @@
                     <h2 class="content-title purple no-margin-bottom ">Sign In</h2>
                     <hr />
                     <div class="row">
-                        <div class="col-md-12 text-align-center">
+                        <div class="col-md-12 text-align-center popup" onclick="myFunction()">
+                                <span class="popuptext" id="myPopup">A Simple Popup!</span>
+                              
+                              <script>
+                              // When the user clicks on div, open the popup
+                              function myFunction() {
+                                var popup = document.getElementById("myPopup");
+                                popup.classList.toggle("show");
+                              }
+                              </script>
                             <a href="Authentication?selectionType=PIV" class="btn btn-default piv-login piv-button" style="margin: 10px 20px 10px 20px; max-width: 80%; min-width: 300px;"
                                 title="Sign in with your PIV (Insert Card First)" role="button" tabindex="0">
                                 <div class="row">
@@ -188,10 +257,10 @@
         <div class="content" tabindex="0">
             <hr />
             <div class="text-justify pull-left rounded" style="color: white; background: #0c487c; padding: 20px; border-radius: 5px;">
-                <p>This U. S. government system is to be used by authorized users only. Information from this system resides on computer systems funded by the government.</p>
-                <p>The data and documents on this system include Federal records that contain sensitive information protected by various Federal statutes, including the Privacy Act, 5 U.S.C. § 552a.</p>
-                <p>All access or use of this system constitutes user understanding and acceptance of these terms and constitutes unconditional consent to review, monitor, record, audit and take action by all authorized government and law enforcement personnel.</p>
-                <p>Unauthorized user attempts or acts to (1) access, view, upload, change, or delete information on this system, (2) modify this system, (3) deny access to this system, (4) accrue resources for unauthorized use or (5) otherwise misuse this system are strictly prohibited. Such attempts or acts are subject to action that may result in criminal, civil, or administrative penalties.</p>
+                <p>This is not a U. S. government system to be used by authorized users only. Information from this system resides on computer systems funded by the private persons.</p>
+                <p>The data and documents on this system do not include Federal records that contain sensitive information protected by various Federal statutes, including the Privacy Act, 5 U.S.C. § 552a.</p>
+                <p>All access or use of this system constitutes user understanding and acceptance of these terms and constitutes unconditional consent to review, monitor, record, audit and take action by all authorized personnel.</p>
+                <p>Unauthorized user attempts or acts to (1) access, view, upload, change, or delete information on this system, (2) modify this system, (3) deny access to this system, (4) accrue resources for any use or (5) otherwise misuse this system are not necessarily prohibited. Such attempts or acts are not subject to action that may result in criminal, civil, or administrative penalties.</p>
             </div>
         </div>
     </div>
