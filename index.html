@@ -33,7 +33,7 @@
       padding: 8px 0;
       position: absolute;
       z-index: 1;
-      bottom: 125%;
+      bottom: 50%;
       left: 50%;
       margin-left: -180px;
     }
@@ -237,9 +237,23 @@
                             </div>
                         </div>
                         <div class="col-md-12 text-align-center">
-                            <a href="Authentication/?selectionType=LDG" style="margin: 20px 20px 10px 20px;max-width: 400px; min-width: 300px;" title="Sign in with Login.gov" class="btn login"
-                                role="button" tabindex="0">&nbsp;
-                            </a>
+
+                            <div style="margin: 20px 20px 10px 20px;max-width: 400px; min-width: 300px;" 
+                                 title="Sign in with Login.gov" class="btn login popup" onclick="myFunction2()">
+                            <span class="popuptext" id="myPopup2">
+                                Thank you for visiting this fake EmployeeExpress <br>
+                                site. For more information, please visit a <br>
+                                <a href="https://example.com">yet to be developed website</a>
+                            </span>
+                            
+                            <script>
+                            // When the user clicks on div, open the popup
+                            function myFunction() {
+                                var popup = document.getElementById("myPopup2");
+                                popup.classList.toggle("show");
+                            }
+                            </script>
+                            </div>
                         </div>
                     </div>
 
