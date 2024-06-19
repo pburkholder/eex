@@ -9,7 +9,7 @@ To demonstrate the ease with which such an attack could take place (and to convi
 
 While the site did mimic the look and feel of the Employee Express site, any attempt to use the site raised a pop-up notifying users it was fake site, which you can see in the code at: 
 
-https://github.com/pburkholder/eex/blob/main/index.html#L205-L206
-https://github.com/pburkholder/eex/blob/main/index.html#L244-L245
+* https://github.com/pburkholder/eex/blob/main/index.html#L205-L206
+* https://github.com/pburkholder/eex/blob/main/index.html#L244-L245
 
 And, since the code was open-source, and tied to my identity, I was not exercising any of the OpSec that an actual attacker would employ – although I should have taken the time then, instead of now, provide a link back to a full explanation.
